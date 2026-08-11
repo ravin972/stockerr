@@ -1,0 +1,5 @@
+Name,NSE Code,Market Capitalization,Current Price,Price to Earning,EPS,Book Value,Debt to equity,ROE,ROCE,Free cash flow,Profit growth
+Good Company Ltd,GOODCO,50000,100,12,10,60,0.2,25,28,5000,20
+Pricey Quality Ltd,PRICEY,200000,500,60,8,50,0.1,30,32,8000,15
+Weak Leveraged Ltd,WEAK,5000,50,40,1,20,2.5,5,6,-1000,-10
+Partial Data Ltd,PARTIAL,,,,,,0.4,18,,,

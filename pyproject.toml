@@ -1,0 +1,39 @@
+[project]
+name = "stockerr"
+version = "0.1.0"
+description = "Read-only unified portfolio analysis & alerts for Groww (stocks + MFs) and Binance (crypto)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.1",
+    "requests>=2.31",
+    "keyring>=24.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+# Streamlit dashboard (app.py).
+ui = ["streamlit>=1.36", "plotly>=5.22"]
+# Confidence Scoring Engine: technical (yfinance) + sentiment (Claude) sub-scores.
+scoring = ["yfinance>=0.2.40", "anthropic>=0.40"]
+# Discovery fetchers that need extra libs (IPO calendar via NSE). MF/crypto/IPO-Guru use requests.
+discovery = ["nse>=3.0"]
+# Only needed if you later switch the Groww source from CSV to the paid Trading API.
+groww-api = ["growwapi>=1.5", "pyotp>=2.9"]
+# Only needed if you want `stockerr run --analyze` to call Claude directly.
+analyze = ["anthropic>=0.40"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+stockerr = "stockerr.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

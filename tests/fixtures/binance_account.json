@@ -1,0 +1,9 @@
+{
+  "permissions": ["SPOT"],
+  "balances": [
+    {"asset": "BTC", "free": "0.5", "locked": "0"},
+    {"asset": "ETH", "free": "2", "locked": "0"},
+    {"asset": "USDT", "free": "100", "locked": "0"},
+    {"asset": "DUST", "free": "0", "locked": "0"}
+  ]
+}

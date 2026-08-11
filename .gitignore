@@ -1,0 +1,23 @@
+# Secrets & config
+.env
+*.env
+!.env.example
+
+# Sensitive output — these files contain real balances and holdings
+exports/
+state/
+data/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.uv/
+uv.lock
